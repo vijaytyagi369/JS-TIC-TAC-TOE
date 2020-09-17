@@ -1,6 +1,31 @@
 *, *::after,::before{
     box-sizing: border-box;
 }
+
+:root{
+    --cell-size:100px;
+    --mark-size:cal(var(--cell-si)*.9)
+}
+
+
+
 body{
     margin:0;
+}
+
+.board{
+    width: 100vw;
+    height: 100vw;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3,auto);
+    justify-content: center;
+}
+
+.cell{
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color:black;
+    border: 1px solid white;
 }
